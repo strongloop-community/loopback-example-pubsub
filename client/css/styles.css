@@ -108,3 +108,37 @@ ps-progress .currentTime {
 ps-progress .playing {
   background: #ff0000;
 }
+
+
+.add-input {
+  display: inline-block;
+  height: 32px;
+  width: 320px;
+  float: left;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.add-btn {
+  display: inline-block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  background: #2CDE50;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  border: none;
+}
+.add-btn:hover {
+  background: #6be784;
+}
+.add-btn:active {
+  background: #27c748;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5) inset;
+}

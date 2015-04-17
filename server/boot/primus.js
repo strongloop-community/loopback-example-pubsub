@@ -13,25 +13,14 @@ module.exports = function(app) {
     });
 
     primus.on('connection', function(spark) {
-      console.log('connection');
-
-      spark.on('data', function() {
-        console.log(arguments);
-      });
-
       var client = new Client({port: MOSQUITTO_PORT}, Adapter);
       var proxy = new Proxy(
         new Connection(spark),
         client
       );
-      spark.on('end', function() {
-        // client.end();
-        // TODO(ritch) disconnect the proxy
-      });
       proxy.connect();
     });
   });
-
 
   var testClient = new Client({port: MOSQUITTO_PORT}, Adapter);
 

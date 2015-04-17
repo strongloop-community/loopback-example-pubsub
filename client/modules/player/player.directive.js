@@ -1,4 +1,4 @@
-app.directive('psPlayer', function ($http, $interval) {
+app.directive('psPlayer', function ($http, $interval, Song) {
     function link(scope) {
         var clientid = 'b23455855ab96a4556cbd0a98397ae8c';
         var song = scope.song;
@@ -29,18 +29,35 @@ app.directive('psPlayer', function ($http, $interval) {
             audio.onended = function() {
               scope.onEnded();
             }
-            audio.onprogress = function() {
+            audio.ontimeupdate = function() {
               scope.onProgress();
               scope.progress();
             }
+
+            onPlayChanged();
           });
         });
 
-        scope.playing = false;
-        scope.play = function () {
-          scope.playing = !scope.playing;
+        song.playing = song.playing || false;
 
-          if (scope.playing) {
+        // watch song.playing
+        scope.$watch('song.playing', function(newPlaying, oldPlaying) {
+          if(newPlaying !== oldPlaying) {
+            onPlayChanged();
+          }
+        });
+
+        scope.togglePlay = function() {
+          song.playing = !song.playing;          
+          console.log('updateAttributes', song.id);
+
+          Song.prototype$updateAttributes({ id: song.id }, {
+            playing: song.playing
+          });
+        }
+
+        function onPlayChanged() {
+          if (song.playing) {
             if (!scope.audio.src) {
               scope.audio.src = scope.stream;
             }
@@ -57,6 +74,7 @@ app.directive('psPlayer', function ($http, $interval) {
             }
           }
         }
+
         scope.formatTime = function(time) {
           var minutes = Math.floor(time / 60);
           var seconds = Math.round(time - minutes * 60);
@@ -75,7 +93,7 @@ app.directive('psPlayer', function ($http, $interval) {
         scope.progress = function() {
           scope.currentTime = scope.audio.currentTime;
           scope.duration = scope.audio.duration;
-          scope.progress.val = 50;
+          scope.$apply();
         }
     }
     return {

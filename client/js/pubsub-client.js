@@ -5,11 +5,14 @@ var duplex = require('duplex');
 Primus.Stream = require('stream');
 
 module.exports = function(PORT) {
+
   var client = new Client({port: PORT, host: 'localhost'}, Adapter, {
     createConnection: function(port, host) {
       var connection = duplex();
-      var primus = Primus.connect('http://' + host + ':' + port, {
-        transformer: 'engine.io'
+
+      var primus = Primus.connect('http://localhost:3000', {
+        transformer: 'engine.io',
+        parser: 'binary'
       });
 
       connection.on('_data', function(chunk) {
@@ -20,14 +23,11 @@ module.exports = function(PORT) {
       primus.on('data', function(chunk) {
         if (chunk && !Buffer.isBuffer(chunk)) {
           // chunk is an arrayBuffer
-          console.log(chunk)
           connection._data(toBuffer(chunk));
         }
       });
 
       primus.on('open', function() {
-        console.log('writing hello');
-        primus.write(new Buffer('hello world'));
         connection.emit('connect');
       });
 
@@ -38,17 +38,6 @@ module.exports = function(PORT) {
 
       return connection;
     }
-  });
-
-  client.connect(function() {
-    client.subscribe('/my-topic', function() {
-      console.log('sub')
-    });
-  });
-
-
-  client.on('message', function() {
-    console.log(arguments);
   });
 
   return client;

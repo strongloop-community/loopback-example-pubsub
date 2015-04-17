@@ -6,7 +6,7 @@
     "pretest": "jshint ."
   },
   "dependencies": {
-    "binary-pack": "^1.0.0",
+    "binary-pack": "0.0.3",
     "compression": "^1.0.3",
     "debug": "^2.1.3",
     "duplex": "^1.0.0",
@@ -15,11 +15,11 @@
     "loopback": "^2.8.0",
     "loopback-boot": "^2.4.0",
     "loopback-datasource-juggler": "^2.7.0",
-    "primus": "^3.0.2",
+    "primus": "2.4.12",
     "serve-favicon": "^2.0.1",
-    "strong-pubsub": "^0.1.9",
-    "strong-pubsub-connection-mqtt": "^0.1.4",
-    "strong-pubsub-mqtt": "^0.1.1",
+    "strong-pubsub": "^0.1.0",
+    "strong-pubsub-connection-mqtt": "^0.1.0",
+    "strong-pubsub-mqtt": "^0.1.0",
     "strong-pubsub-primus": "^0.1.0",
     "strong-pubsub-proxy": "^0.1.0"
   },

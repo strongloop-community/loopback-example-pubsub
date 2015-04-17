@@ -7,10 +7,33 @@
   <title>LoopBack Example PubSub</title>
   <link rel="stylesheet prefetch" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
   <link rel="stylesheet prefetch" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="/css/styles.css?v=1.0">
 </head>
 
 <body>
 
+  <div ng-app="ps" ng-controller="AppController">
+    <h1>Playlist</h1>
+    <ps-playlist playlist="playlist"></ps-playlist>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.js"></script>
+
+  <script src="/primus/primus.js"></script>
+  <!-- browserify bundled client -->
+  <script src="/pubsub-client.js"></script>
+
+  <!-- loopback generated angular sdk -->
+  <script src="/js/lb-services.js"></script>
+
+  <script src="/modules/app/app.js"></script>
+  <script src="/modules/pubsub/pubsub.services.js"></script>
+  <script src="/test/test.controller.js"></script>
+  <script src="/modules/player/player.directive.js"></script>
+  <script src="/modules/playlist/playlist.services.js"></script>
+  <script src="/modules/playlist/playlist.directive.js"></script>
+  <script src="/modules/progress/progress.directive.js"></script>
+  <script src="/modules/song/song.directive.js"></script>
 </body>
 </html>

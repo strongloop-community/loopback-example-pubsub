@@ -9,5 +9,5 @@
     <a ng-href="{{trackUrl}}"><h1>{{title}}</h1></a>
     <a ng-href="{{bandUrl}}"><p>{{band}}</p></a>
   </div>
-  <a class="play" ng-click="play()" ng-class="{'playing': playing, 'ion-ios7-play': !playing, 'ion-ios7-pause': playing}"></a>
+  <a class="play" ng-click="togglePlay()" ng-class="{'playing': song.playing, 'ion-ios7-play': !song.playing, 'ion-ios7-pause': song.playing}"></a>
 </div>

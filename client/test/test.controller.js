@@ -3,7 +3,7 @@ app.controller('TestController', ['$scope', 'Playlist', function($scope, Playlis
 
   $scope.testSongs = [$scope.testSong];
 
-  var playlist = $scope.playlist = new Playlist();
+  var playlist = $scope.playlist = new Playlist('1234567');
 
   playlist.addSong(testURL);
 

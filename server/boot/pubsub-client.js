@@ -8,11 +8,6 @@ module.exports = function(app) {
       debug: true
     });
 
-    b.require('stream');
-    b.require('url');
-    b.require('util');
-    b.require('buffer');
-
     b.require(path.join(__dirname, '..', '..',
       'client', 'js', 'pubsub-client.js'), {expose: 'pubsub-client'});
 
