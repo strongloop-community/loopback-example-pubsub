@@ -1,0 +1,110 @@
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-image: -moz-radial-gradient(circle, #eeeeee, #bdc3c7 80%);
+  background-image: -webkit-radial-gradient(circle, #eeeeee, #bdc3c7 80%);
+  background-image: radial-gradient(circle, #eeeeee, #bdc3c7 80%);
+  font-family: 'Open Sans',sans-serif;
+}
+
+/***
+ * ps-player
+ ***/
+ps-player {
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+ps-player a, ps-player a:hover, ps-player a:link, ps-player a:active {
+  color: #fff;
+  text-decoration: none;
+}
+ps-player p, ps-player h1 {
+  padding: 0;
+  margin: 0;
+}
+ps-player h1 {
+  font-size: 1em;
+  font-weight: 100;
+}
+ps-player p {
+  font-size: 0.75em;
+}
+ps-player .album-art {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+ps-player .wave {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.0;
+}
+ps-player .details {
+  width: 100%;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+ps-player .track-info {
+  float: left;
+  padding-left: 4px;
+}
+ps-player .play {
+  float: right;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+  background: #2CDE50;
+  transition: all 0.3s ease 0s;
+}
+ps-player .play:hover {
+  background: #6be784;
+}
+ps-player .play:active {
+  background: #27c748;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5) inset;
+}
+
+ps-player .playhead {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px;
+  line-height: 5px;
+}
+
+ps-progress .currentTime {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 18px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  text-align: center;
+  min-width: 50px;
+  padding: 5px;
+  line-height: 18px;
+}
+
+ps-progress .playing {
+  background: #ff0000;
+}

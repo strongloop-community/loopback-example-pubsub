@@ -1,0 +1,13 @@
+<div class="album-art" ng-style="{'background-image': 'url('+albumArt+')'}"></div>
+<div class="wave" ng-style="{'background-image': 'url('+wave+')'}"></div>
+<div class="duration">
+  <div class="playhead" style="width: {{currentTime / duration * 100}}%;"></div>
+  <div class="currentTime">{{formatTime(currentTime)}}</div>
+</div>
+<div class="details" style="position: absolute; bottom: 0;">
+  <div class="track-info">
+    <a ng-href="{{trackUrl}}"><h1>{{title}}</h1></a>
+    <a ng-href="{{bandUrl}}"><p>{{band}}</p></a>
+  </div>
+  <a class="play" ng-click="play()" ng-class="{'playing': playing, 'ion-ios7-play': !playing, 'ion-ios7-pause': playing}"></a>
+</div>

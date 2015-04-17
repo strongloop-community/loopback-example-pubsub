@@ -1,0 +1,40 @@
+{
+  "name": "strong-pubsub-angular-loopback",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "pretest": "jshint ."
+  },
+  "dependencies": {
+    "binary-pack": "^1.0.0",
+    "compression": "^1.0.3",
+    "debug": "^2.1.3",
+    "duplex": "^1.0.0",
+    "engine.io": "^1.5.1",
+    "errorhandler": "^1.1.1",
+    "loopback": "^2.8.0",
+    "loopback-boot": "^2.4.0",
+    "loopback-datasource-juggler": "^2.7.0",
+    "primus": "^3.0.2",
+    "serve-favicon": "^2.0.1",
+    "strong-pubsub": "^0.1.9",
+    "strong-pubsub-connection-mqtt": "^0.1.4",
+    "strong-pubsub-mqtt": "^0.1.1",
+    "strong-pubsub-primus": "^0.1.0",
+    "strong-pubsub-proxy": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-loopback-sdk-angular": "^0.1.3",
+    "gulp-rename": "^1.2.2",
+    "jshint": "^2.5.6"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "strong-pubsub-angular-loopback"
+}
