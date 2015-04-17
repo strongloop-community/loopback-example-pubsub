@@ -1,1 +1,0 @@
-process.bootFlags.push('fooLoaded');

@@ -1,7 +1,0 @@
-{
-  "initial": {
-    "../../helpers/push-name-middleware": {
-      "params": "custom-middleware"
-    }
-  }
-}
