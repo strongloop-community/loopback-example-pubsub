@@ -27,6 +27,7 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
+    "browserify": "^11.0.1",
     "gulp": "^3.8.11",
     "gulp-loopback-sdk-angular": "^0.1.3",
     "gulp-rename": "^1.2.2",
