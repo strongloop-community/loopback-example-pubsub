@@ -12,7 +12,7 @@ See also:
 $ git clone https://github.com/strongloop/loopback-example-pubsub.git
 $ cd loopback-example-pubsub
 $ npm install
-$ gulp
+$ gulp # manually exit via ctrl+c here, it is a known issue ATM
 $ node server/server.js
 ```
 
