@@ -8,11 +8,14 @@ See also:
 
 ## Install
 
+The example requires `node`, `npm` and [`mosquitto`](http://mosquitto.org/download/).
+
 ```
 $ git clone https://github.com/strongloop/loopback-example-pubsub.git
 $ cd loopback-example-pubsub
 $ npm install
 $ gulp # manually exit via ctrl+c here, it is a known issue ATM
+$ mosquitto & # run the mosquitto server
 $ node server/server.js
 ```
 
