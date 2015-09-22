@@ -13,4 +13,4 @@ module.exports = function(app) {
 
     b.bundle().pipe(res);
   });
-}
+};
