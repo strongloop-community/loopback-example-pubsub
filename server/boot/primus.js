@@ -1,7 +1,7 @@
 var Primus = require('primus');
 var Client = require('strong-pubsub');
 var Connection = require('strong-pubsub-connection-mqtt');
-var Proxy = require('strong-pubsub-proxy');
+var PubSubProxy = require('strong-pubsub-proxy');
 var Adapter = require('strong-pubsub-mqtt');
 var MOSQUITTO_PORT = process.env.MOSQUITTO_PORT || 1883;
 
@@ -14,7 +14,7 @@ module.exports = function(app) {
 
     primus.on('connection', function(spark) {
       var client = new Client({port: MOSQUITTO_PORT}, Adapter);
-      var proxy = new Proxy(
+      var proxy = new PubSubProxy(
         new Connection(spark),
         client
       );
@@ -27,4 +27,4 @@ module.exports = function(app) {
   setInterval(function() {
     testClient.publish('/my-topic', 'hello');
   }, 1000);
-}
+};

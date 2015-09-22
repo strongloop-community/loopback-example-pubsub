@@ -1,2 +1,5 @@
 /client/
 /node_modules/
+pubsub-client.js
+pubsub-mqtt.js
+pubsub-primus.js
