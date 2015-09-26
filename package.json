@@ -37,5 +37,6 @@
     "type": "",
     "url": ""
   },
-  "description": "strong-pubsub-angular-loopback"
+  "description": "strong-pubsub-angular-loopback",
+  "license": "MIT"
 }
