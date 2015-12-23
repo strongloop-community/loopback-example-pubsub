@@ -21,9 +21,7 @@
     "strong-pubsub-connection-mqtt": "^0.1.0",
     "strong-pubsub-mqtt": "^0.1.0",
     "strong-pubsub-primus": "^0.1.0",
-    "strong-pubsub-proxy": "^0.1.0"
-  },
-  "optionalDependencies": {
+    "strong-pubsub-proxy": "^0.1.0",
     "loopback-component-explorer": "^2.1.0"
   },
   "devDependencies": {
