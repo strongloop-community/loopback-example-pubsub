@@ -13,6 +13,7 @@ app.start = function() {
   // start the web server
   var server = app.listen(function() {
     app.emit('started', server);
+    var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', app.get('url'));
     if (app.get('loopback-component-explorer')) {
       var explorerPath = app.get('loopback-component-explorer').mountPath;
