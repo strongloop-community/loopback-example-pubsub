@@ -4,7 +4,7 @@
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint .",
-    "start": "node server/server",
+    "start": "node .",
     "test": "mocha"
   },
   "dependencies": {
