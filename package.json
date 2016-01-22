@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint .",
+    "lint": "jshint .",
     "start": "node .",
-    "test": "mocha"
+    "test": "mocha",
+      "posttest": "npm run lint"
   },
   "dependencies": {
     "binary-pack": "0.0.3",
