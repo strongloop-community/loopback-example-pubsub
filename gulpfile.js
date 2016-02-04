@@ -8,3 +8,7 @@ gulp.task('default', function() {
     .pipe(rename('lb-services.js'))
     .pipe(gulp.dest('./client/js'));
 });
+
+gulp.doneCallback = function(err) {
+  process.exit(err ? 1 : 0);
+};
