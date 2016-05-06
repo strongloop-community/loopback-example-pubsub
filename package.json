@@ -6,7 +6,7 @@
     "lint": "jshint .",
     "start": "node .",
     "test": "mocha",
-      "posttest": "npm run lint"
+    "posttest": "npm run lint"
   },
   "dependencies": {
     "binary-pack": "0.0.3",

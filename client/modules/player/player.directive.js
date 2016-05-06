@@ -1,3 +1,8 @@
+// Copyright IBM Corp. 2015. All Rights Reserved.
+// Node module: loopback-example-pubsub
+// This file is licensed under the MIT License.
+// License text available at https://opensource.org/licenses/MIT
+
 app.directive('psPlayer', function ($http, $interval, Song) {
     function link(scope) {
         var clientid = 'b23455855ab96a4556cbd0a98397ae8c';

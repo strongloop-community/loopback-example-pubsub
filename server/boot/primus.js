@@ -1,3 +1,8 @@
+// Copyright IBM Corp. 2015. All Rights Reserved.
+// Node module: loopback-example-pubsub
+// This file is licensed under the MIT License.
+// License text available at https://opensource.org/licenses/MIT
+
 var Primus = require('primus');
 var Client = require('strong-pubsub');
 var Connection = require('strong-pubsub-connection-mqtt');
